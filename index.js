@@ -8,16 +8,15 @@ document.getElementById('resume').disabled = true;
 document.getElementById('reset').disabled = true;
 
 function startTimer(){
-    var time = document.getElementById('time').value;
 
-    if(time.length == 0){
-        alert("Enter Time First...")
+    hour = Number(document.getElementById('hour').value);
+    minute = Number(document.getElementById('minute').value);
+    second = Number(document.getElementById('second').value);
+
+    if(hour == '' || minute == '' || second == ''){
+        alert("Plese select all the parameters of time");
         return;
     }
-
-    hour = Number(time.substring(0, 2))%12;
-    minute = Number(time.substring(3, 5));
-    second = Number(time.substring(7, 9));
 
     document.getElementById('start').disabled = true;
     document.getElementById('pause').disabled = false;

@@ -5,18 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timer</title>
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Icon -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@100..700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <h1>Countdown Timer</h1>
 
-    Enter Time : 
-    <input type="time" id="time" step="1">
+    <input type="number" id="hour" min="0" max="23" placeholder="Select Hour">
+    <input type="number" id="minute" min="0" max="59" placeholder="Select Minute">
+    <input type="number" id="second" min="0" max="59" placeholder="Select Second" >
 
-    <p id="timer"> 0h 0m 0s</p>
+    <p id="timer"> 00h 00m 00s</p>
 
     <button onclick="startTimer()" id="start">Start</button>
     <button onclick="pauseTimer()" id="pause">Pause</button>
     <button onclick="resumeTimer()" id="resume">Resume</button>
-    <button onclick="resetTimer()" id="reset">Reset</button>
+    <button onclick="resetTimer()" id="reset" class="material-symbols-outlined">Reset</button>
 
     <script src="index.js"></script>
 </body>
